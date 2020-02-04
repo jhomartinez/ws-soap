@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://webservice.codigoj.co/entity/ws/types"
+	xmlns:tns="http://webservice.codigoj.co/entity/ws/types"
+	elementFormDefault="qualified">
+	
+	<xsd:complexType name="CategoriaType">
+		<xsd:sequence>
+			<xsd:element name="id" type="xsd:int"/>
+			<xsd:element name="descripcion" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://webservice.codigoj.co/entity/ws/types"
+	xmlns:tns="http://webservice.codigoj.co/entity/ws/types"
+	elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="categoriaType.xsd" />
+
+	<xsd:element name="buscarRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="id" type="xsd:int" minOccurs="0" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="buscarResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="listaCategorias"
+					type="tns:ListaCategoriaType" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="ListaCategoriaType">
+		<xsd:sequence>
+			<xsd:element name="categoria" type="tns:CategoriaType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>
